@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="/static/script.js"></script>
   </head>
 
   <body>
@@ -31,7 +31,7 @@
       <button
         class="navbar-toggler"
         type="button"
-        style="background-color: blue;"
+        style="background-color: blue"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
@@ -77,13 +77,17 @@
     <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-6 form-container">
-          <form>
+          <form
+            method="post"
+            action="https://script.google.com/macros/s/AKfycbxppWR6dHXadGrSJW0C7FL3MHlhrkqjnTfKhARxtJ6BA-qaWW06LJF_A7vBBMkF0w6l/exec"
+          >
             <div class="form-group">
               <label for="name">Name</label>
               <input
                 type="text"
                 class="form-control"
                 id="name"
+                name="Name"
                 placeholder="Enter your name"
               />
             </div>
@@ -93,6 +97,7 @@
                 type="text"
                 class="form-control"
                 id="city"
+                name="City"
                 placeholder="Enter your city"
               />
             </div>
@@ -102,6 +107,7 @@
                 type="tel"
                 class="form-control"
                 id="number"
+                name="Number"
                 placeholder="Enter your phone number"
               />
             </div>
@@ -111,12 +117,17 @@
                 type="email"
                 class="form-control"
                 id="email"
+                name="Email"
                 placeholder="Enter your email"
               />
             </div>
             <div class="form-group">
               <label for="project-tech">Choose Project</label>
-              <select class="form-control" id="project-tech">
+              <select
+                class="form-control"
+                name="Project_Tech"
+                id="project-tech"
+              >
                 <option value="" disabled selected>Select</option>
                 <option class="bg-dark text-primary" value="app">
                   Web Development
@@ -145,6 +156,7 @@
                 class="form-control"
                 id="query"
                 rows="5"
+                name="Query"
                 placeholder="Enter your query"
               ></textarea>
             </div>
@@ -188,5 +200,30 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxppWR6dHXadGrSJW0C7FL3MHlhrkqjnTfKhARxtJ6BA-qaWW06LJF_A7vBBMkF0w6l/exec";
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert("Form submitted successfully!");
+              form.reset(); // Optional: Reset the form after successful submission
+            } else {
+              alert(
+                "There was a problem submitting the form. Please try again later."
+              );
+            }
+          })
+          .catch((error) => console.error("Error", error.message));
+      });
+    </script>
   </body>
 </html>
