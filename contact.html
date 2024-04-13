@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact CodeCrush</title>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/script.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark p-3">
+      <a
+        style="font-size: 30px; font-family: cursive; font-weight: 700"
+        class="navbar-brand text-primary"
+        href="index.html"
+        >CodeCrush</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="text-center text-bold content" style="padding-top: 20px">
+      <span class="text-center" style="font-weight: bold; font-size: 20px"
+        >Connect With</span
+      >
+      <span
+        class="text-primary"
+        style="
+          font-family: cursive;
+          font-size: 30px;
+          text-decoration: underline;
+        "
+        >CodeCrush</span
+      >
+    </div>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6 form-container">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                placeholder="Enter your city"
+              />
+            </div>
+            <div class="form-group">
+              <label for="number">Number</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="number"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="project-tech">Choose Project</label>
+              <select class="form-control" id="project-tech">
+                <option value="" disabled selected>Select</option>
+                <option class="bg-dark text-primary" value="app">
+                  Web Development
+                </option>
+                <option class="bg-dark text-primary" value="app">
+                  App Development
+                </option>
+                <option class="bg-dark text-primary" value="design">
+                  Graphic Design
+                </option>
+                <option class="bg-dark text-primary" value="design">
+                  Logo Design
+                </option>
+                <option class="bg-dark text-primary" value="design">
+                  Data Analytics
+                </option>
+                <option class="bg-dark text-primary" value="design">
+                  Power BI
+                </option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="query">Query</label>
+              <textarea
+                class="form-control"
+                id="query"
+                rows="5"
+                placeholder="Enter your query"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="footer text-center mt-5 pt-3 mb-3"
+      style="border-top: 1px solid black"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="text-primary">Contact Information</h4>
+            <div class="contact-info">
+              <span><i class="fas fa-phone mr-2"></i>+918176060086</span><br />
+              <span><i class="fas fa-phone mr-2"></i>+919305636136</span><br />
+              <span
+                ><i class="far fa-envelope mr-2"></i
+                >amantripathi897@gmail.com</span
+              ><br />
+              <span
+                ><i class="far fa-envelope mr-2"></i
+                >shikharmani2000@gmail.com</span
+              ><br />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4 class="text-primary">Follow Us</h4>
+            <div class="social-icons">
+              <a href="#" style="color: black"
+                ><i class="fab fa-facebook mr-2"></i>Facebook</a
+              >
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
