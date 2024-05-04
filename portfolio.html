@@ -4,33 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeCrush - Portfolio</title>
-
     <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <style>
+      /* Custom CSS for Portfolio page */
+      body {
+        background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
+        font-family: "Arial", sans-serif;
+      }
+      .navbar {
+        background-color: #fff !important;
+      }
+      .portfolio-section {
+        padding: 100px 0;
+      }
+      .portfolio-item {
+        margin-bottom: 30px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+      .portfolio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+      }
+      .portfolio-item img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+      .portfolio-item .item-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #138808;
+      }
+      .portfolio-item .item-category {
+        font-size: 1.2em;
+        color: #666;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark p-3">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a
-        style="font-size: 30px; font-family: cursive; font-weight: 700"
-        class="navbar-brand text-primary"
+        class="navbar-brand d-flex justify-content-center align-items-center"
         href="index.html"
-        >CodeCrush</a
       >
+        <img
+          style="
+            height: 70px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+          "
+          src="codeCrush.png"
+          alt="logo"
+        />
+        <span
+          class="mx-2"
+          style="color: #138808; font-size: 1.2em; font-weight: bold"
+          >CodeCrush</span
+        >
+      </a>
       <button
         class="navbar-toggler"
         type="button"
-        style="background-color: blue;"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
@@ -41,122 +88,189 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link text-primary" href="index.html">Home</a>
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="portfolio.html">Portfolio</a>
+            <a class="nav-link" href="#">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-primary" href="contact.html">Contact</a>
+            <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="text-center text-bold content" style="padding-top: 20px">
-      <span
-        class="text-primary"
-        style="
-          font-family: cursive;
-          font-size: 30px;
-          text-decoration: underline;
-        "
-        >CodeCrush</span
-      >
-      <span class="text-center" style="font-weight: bold; font-size: 20px"
-        >Portfolio</span
-      >
-    </div>
-    <div class="container mt-5 mb-5 text-center">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <div class="card-body">
-              <h4 class="card-title text-primary">
-                <u>Global Holidays - Web Development</u>
-              </h4>
-              <p class="card-text">
-                <u>Github Link</u> :
-                <a href="" target="_blank">Go To Project</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <div class="card-body">
-              <h4 class="card-title text-primary">
-                <u>Hospitality Dashboard - Power BI</u>
-              </h4>
-              <p class="card-text">
-                <u>Google Drive Link</u> :
-                <a
-                  href="https://drive.google.com/drive/folders/1UJQnkMDhpdJ2iJ-HjP6qrNQdN1fX4O-i?usp=sharing"
-                  target="_blank"
-                  >Go To Project</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <div class="card-body">
-              <h4 class="card-title text-primary">
-                <u>Amazon Shopper Dashboard - Power BI</u>
-              </h4>
-              <p class="card-text">
-                <u>Google Drive Link</u> :
-                <a
-                  href="https://drive.google.com/file/d/1eVmm-tuLy27oEYnNCdCUlXreVOAah0k4/view?usp=drive_link"
-                  target="_blank"
-                  >Go To Project</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer
-      class="footer text-center pt-3 mb-3"
-      style="border-top: 1px solid black"
-    >
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h4 class="text-primary">Contact Information</h4>
-            <div class="contact-info">
-              <span><i class="fas fa-phone mr-2"></i>+918176060086</span><br />
-              <span><i class="fas fa-phone mr-2"></i>+919305636136</span><br />
-              <span
-                ><i class="far fa-envelope mr-2"></i
-                >amantripathi897@gmail.com</span
-              ><br />
-              <span
-                ><i class="far fa-envelope mr-2"></i
-                >shikharmani2000@gmail.com</span
-              ><br />
+          <div class="col-lg-4">
+            <div class="portfolio-item">
+              <img src="portfolio1.jpg" alt="Portfolio Item 1" />
+              <h3 class="item-title">Project 1</h3>
+              <p class="item-category">Web Development</p>
             </div>
           </div>
-          <div class="col-md-6">
-            <h4 class="text-primary">Follow Us</h4>
-            <div class="social-icons">
-              <a href="#" style="color: black"
-                ><i class="fab fa-facebook mr-2"></i>Facebook</a
-              >
-              <br />
+          <div class="col-lg-4">
+            <div class="portfolio-item">
+              <img src="portfolio2.jpg" alt="Portfolio Item 2" />
+              <h3 class="item-title">Project 2</h3>
+              <p class="item-category">App Development</p>
             </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="portfolio-item">
+              <img src="portfolio3.jpg" alt="Portfolio Item 3" />
+              <h3 class="item-title">Project 3</h3>
+              <p class="item-category">Graphic Design</p>
+            </div>
+          </div>
+          <!-- Add more portfolio items as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer" style="background-color: #f8f9fa; padding: 50px 0">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <h3
+              style="
+                font-family: 'Roboto', sans-serif;
+                color: #333;
+                font-weight: bold;
+                color: #138808;
+              "
+            >
+              About Us
+            </h3>
+            <p
+              style="
+                font-family: 'Roboto', sans-serif;
+                color: #666;
+                font-size: 16px;
+              "
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              aliquam, justo sit amet auctor accumsan, ligula sem vestibulum
+              nisi, et mollis arcu libero in lacus.
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <h3
+              style="
+                font-family: 'Roboto', sans-serif;
+                color: #333;
+                font-weight: bold;
+                color: #138808;
+              "
+            >
+              Services
+            </h3>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="#"
+                  style="color: #666; font-family: 'Roboto', sans-serif"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  style="color: #666; font-family: 'Roboto', sans-serif"
+                  >App Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  style="color: #666; font-family: 'Roboto', sans-serif"
+                  >Graphic Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  style="color: #666; font-family: 'Roboto', sans-serif"
+                  >Digital Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h3
+              style="
+                font-family: 'Roboto', sans-serif;
+                color: #333;
+                font-weight: bold;
+                color: #138808;
+              "
+            >
+              Contact Us
+            </h3>
+            <ul class="list-unstyled">
+              <li style="color: #666; font-family: 'Roboto', sans-serif">
+                Email: info@codecrush.com
+              </li>
+              <li style="color: #666; font-family: 'Roboto', sans-serif">
+                Phone: +1234567890
+              </li>
+              <li style="color: #666; font-family: 'Roboto', sans-serif">
+                Address: 123 Main Street, City
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h3
+              style="
+                font-family: 'Roboto', sans-serif;
+                color: #333;
+                font-weight: bold;
+                color: #138808;
+              "
+            >
+              Follow Us
+            </h3>
+            <ul
+              class="list-unstyled"
+              style="font-family: 'Roboto', sans-serif; color: #666"
+            >
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr style="border-top: 1px solid #ddd" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="color: #666; font-family: 'Roboto', sans-serif">
+              &copy; 2024 CodeCrush. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
