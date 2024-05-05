@@ -3,35 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact CodeCrush</title>
-
+    <title>CodeCrush - Contact Us</title>
     <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/static/script.js"></script>
-  </head>
+    <style>
+      /* Custom CSS for Contact Us page */
+      body {
+        background: linear-gradient(to bottom, #ff9933, #ff9933, #138808);
+        font-family: "Arial", sans-serif;
+      }
+      .navbar {
+        background-color: #4bbe40;
+      }
+      .navbar-nav .nav-link {
+        position: relative;
+      }
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: transparent;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .navbar-nav .nav-link:hover::after {
+        background-color: #ffcc00; /* Lightning strike color */
+        transform: scaleX(1);
+      }
+      /* Additional styles for Contact Us form */
+      .contact-section {
+        padding: 100px 0;
+        text-align: center;
+        color: #fff;
+      }
+      .contact-section h2 {
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 50px;
+      }
+      .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        position: relative;
+        margin-bottom: 30px;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f9f9f9;
+        font-size: 1.1em;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      .form-group label {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #555; /* Adjusted color for better visibility */
+        font-size: 1em;
+        transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+        pointer-events: none;
+        z-index: -1;
+      }
+      .form-group input:focus + label,
+      .form-group textarea:focus + label,
+      .form-group input:not(:placeholder-shown) + label,
+      .form-group textarea:not(:placeholder-shown) + label {
+        top: 10px;
+        font-size: 0.8em;
+        color: #777; /* Adjusted color for better visibility */
+      }
+      .btn-submit {
+        background-color: #ffcc00;
+        color: #138808;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
 
+      .btn-submit:hover {
+        background-color: #138808;
+        color: #ffcc00;
+      }
+      .input-group-text {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 1.1em;
+      }
+      .input-group-text i {
+        transition: transform 0.3s ease;
+      }
+      .input-group-text:hover i {
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark p-3">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a
-        style="font-size: 30px; font-family: cursive; font-weight: 700"
-        class="navbar-brand text-primary"
+        class="navbar-brand d-flex justify-content-center align-items-center"
         href="index.html"
-        >CodeCrush</a
       >
+        <img
+          style="
+            height: 70px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+          "
+          src="codeCrush.png"
+          alt="logo"
+        />
+        <span
+          class="mx-2"
+          style="color: #138808; font-size: 1.2em; font-weight: bold"
+          >CodeCrush</span
+        >
+      </a>
       <button
         class="navbar-toggler"
         type="button"
-        style="background-color: blue"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
@@ -42,188 +162,132 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link text-primary" href="index.html">Home</a>
+            <a class="nav-link text-white" href="#">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="portfolio.html">Portfolio</a>
+            <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="about.html">About Us</a>
+            <a class="nav-link text-white" href="about.html">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="contact.html">Contact</a>
+            <a class="nav-link text-white" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="text-center text-bold content" style="padding-top: 20px">
-      <span class="text-center" style="font-weight: bold; font-size: 20px"
-        >Connect With</span
-      >
-      <span
-        class="text-primary"
-        style="
-          font-family: cursive;
-          font-size: 30px;
-          text-decoration: underline;
-        "
-        >CodeCrush</span
-      >
-    </div>
-
-    <div class="container mt-5">
-      <div class="row justify-content-center">
-        <div class="col-md-6 form-container">
-          <form
-            method="post"
-            action="https://script.google.com/macros/s/AKfycbxppWR6dHXadGrSJW0C7FL3MHlhrkqjnTfKhARxtJ6BA-qaWW06LJF_A7vBBMkF0w6l/exec"
-          >
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="Name"
-                placeholder="Enter your name"
-              />
-            </div>
-            <div class="form-group">
-              <label for="city">City</label>
-              <input
-                type="text"
-                class="form-control"
-                id="city"
-                name="City"
-                placeholder="Enter your city"
-              />
-            </div>
-            <div class="form-group">
-              <label for="number">Number</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="number"
-                name="Number"
-                placeholder="Enter your phone number"
-              />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="Email"
-                placeholder="Enter your email"
-              />
-            </div>
-            <div class="form-group">
-              <label for="project-tech">Choose Project</label>
-              <select
-                class="form-control"
-                name="Project_Tech"
-                id="project-tech"
-              >
-                <option value="" disabled selected>Select</option>
-                <option class="bg-dark text-primary" value="Web Development">
-                  Web Development
-                </option>
-                <option class="bg-dark text-primary" value="App Development">
-                  App Development
-                </option>
-                <option class="bg-dark text-primary" value="Graphic Designing">
-                  Graphic Design
-                </option>
-                <option class="bg-dark text-primary" value="Logo Designing">
-                  Logo Design
-                </option>
-                <option class="bg-dark text-primary" value="Data Analytics">
-                  Data Analytics
-                </option>
-                <option class="bg-dark text-primary" value="Power BI">
-                  Power BI
-                </option>
-                <!-- Add more options as needed -->
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="query">Query</label>
-              <textarea
-                class="form-control"
-                id="query"
-                rows="5"
-                name="Query"
-                placeholder="Enter your query"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">
-              Submit
-            </button>
-          </form>
+    <!-- Contact Us Content -->
+    <div class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Connect With <span style="color: #138808;">CodeCrush</span></h2>
+            <form class="contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Full Name" style="color: #138808; font-weight: 700; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman';" required />
+                <label>Full Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" style="color: #138808; font-weight: 700; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman'" required />
+                <label>Email</label>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" placeholder="Contact Number" style="color: #138808; font-weight: 700; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman'" required />
+                <label>Phone Number</label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="City" style="color: #138808; font-weight: 700; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman'" required />
+                <label>City</label>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" rows="5" placeholder="Enter Your Query" style="color: #138808; font-weight: 700; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman'" required></textarea>
+                <label>Message</label>
+              </div>
+              <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <footer
-      class="footer text-center mt-5 pt-3 mb-3"
-      style="border-top: 1px solid black"
-    >
+
+    <!-- Footer -->
+    <footer class="footer" style="background-color: #f8f9fa; padding: 50px 0">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h4 class="text-primary">Contact Information</h4>
-            <div class="contact-info">
-              <span><i class="fas fa-phone mr-2"></i>+918176060086</span><br />
-              <span><i class="fas fa-phone mr-2"></i>+919305636136</span><br />
-              <span
-                ><i class="far fa-envelope mr-2"></i
-                >amantripathi897@gmail.com</span
-              ><br />
-              <span
-                ><i class="far fa-envelope mr-2"></i
-                >shikharmani2000@gmail.com</span
-              ><br />
-            </div>
+          <div class="col-lg-3">
+            <h3>About Us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              aliquam, justo sit amet auctor accumsan, ligula sem vestibulum
+              nisi, et mollis arcu libero in lacus.
+            </p>
           </div>
-          <div class="col-md-6">
-            <h4 class="text-primary">Follow Us</h4>
-            <div class="social-icons">
-              <a href="#" style="color: black"
-                ><i class="fab fa-facebook mr-2"></i>Facebook</a
-              >
-              <br />
-            </div>
+          <div class="col-lg-3">
+            <h3>Services</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#">Web Development</a>
+              </li>
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#">App Development</a>
+              </li>
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#">Graphic Design</a>
+              </li>
+              <li>
+                <a style="text-decoration: none" href="#">Digital Marketing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h3>Contact Us</h3>
+            <ul class="list-unstyled">
+              <li>Email: info@codecrush.com</li>
+              <li>Phone: +1234567890</li>
+              <li>Address: 123 Main Street, City</li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h3>Follow Us</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#"
+                  ><i class="fab fa-facebook-f"></i> Facebook</a
+                >
+              </li>
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#"
+                  ><i class="fab fa-twitter"></i> Twitter</a
+                >
+              </li>
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#"
+                  ><i class="fab fa-instagram"></i> Instagram</a
+                >
+              </li>
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#"
+                  ><i class="fab fa-linkedin-in"></i> LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr style="border-top: 1px solid #ddd" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p>&copy; 2024 CodeCrush. All rights reserved.</p>
           </div>
         </div>
       </div>
     </footer>
 
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxppWR6dHXadGrSJW0C7FL3MHlhrkqjnTfKhARxtJ6BA-qaWW06LJF_A7vBBMkF0w6l/exec";
-      const form = document.querySelector("form");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, {
-          method: "POST",
-          body: new FormData(form),
-        })
-          .then((response) => {
-            if (response.ok) {
-              alert("Form submitted successfully!");
-              form.reset(); // Optional: Reset the form after successful submission
-            } else {
-              alert(
-                "There was a problem submitting the form. Please try again later."
-              );
-            }
-          })
-          .catch((error) => console.error("Error", error.message));
-      });
-    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
