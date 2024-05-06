@@ -1,2 +1,2 @@
-# CodeCrush
+# CodeCrush Hub
 A StartUp Approach
