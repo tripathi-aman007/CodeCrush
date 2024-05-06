@@ -12,216 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <style>
-      /* Custom CSS for Portfolio page */
-      body {
-        background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
-        font-family: "Arial", sans-serif;
-      }
-      .navbar {
-        background-color: #4bbe40;
-      }
-      .navbar-nav .nav-link {
-        position: relative;
-      }
-      .navbar-nav .nav-link::after {
-        content: "";
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: transparent;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-      }
-      .navbar-nav .nav-link:hover::after {
-        background-color: #ffcc00; /* Lightning strike color */
-        transform: scaleX(1);
-      }
-      .portfolio-section {
-        padding: 100px 0;
-      }
-      .portfolio-item {
-        margin-bottom: 30px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-      }
-      .portfolio-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-      }
-      .portfolio-item img {
-        max-width: 100%;
-        border-radius: 5px;
-      }
-      .portfolio-item .item-title {
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-top: 10px;
-        color: #138808;
-      }
-      .portfolio-item .item-category {
-        font-size: 1.2em;
-        color: #666;
-      }
-      /* Custom CSS for animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .fadeIn {
-        animation: fadeIn 1.5s ease-in-out;
-      }
-      body {
-        background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
-        font-family: "Arial", sans-serif;
-      }
-
-      .hero {
-        background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
-        color: #fff;
-        padding: 150px 0;
-      }
-      .hero-text {
-        text-align: center;
-      }
-      .hero-text h1 {
-        font-size: 4em;
-        font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-      .hero-text p {
-        font-size: 1.5em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-      .btn-get-started {
-        margin-top: 30px;
-      }
-      /* Custom CSS for additional animations */
-      @keyframes slideInDown {
-        from {
-          transform: translateY(-100%);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      .slideInDown {
-        animation: slideInDown 1s ease-in-out;
-      }
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.1);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-      .pulse {
-        animation: pulse 2s infinite ease-in-out;
-      }
-      /* Custom CSS for scrolling animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .fadeInUp {
-        animation: fadeInUp 1s ease-out;
-      }
-      .list-item {
-        opacity: 0;
-      }
-      .list-item.active {
-        opacity: 1;
-      }
-      /* Custom CSS for Our Services section */
-      .services {
-        padding: 100px 0;
-        background-color: #fff;
-      }
-      .services h2 {
-        font-size: 3em;
-        font-weight: bold;
-        color: #138808;
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      .service-item {
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      .service-icon {
-        font-size: 4em;
-        color: #138808;
-      }
-      .service-title {
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-top: 20px;
-      }
-      .service-description {
-        font-size: 1.2em;
-        margin-top: 10px;
-      }
-      /* Custom CSS for Counter section */
-      .counter {
-        background-color: #138808;
-        color: #fff;
-        padding: 100px 0;
-        text-align: center;
-      }
-      .counter h2 {
-        font-size: 3em;
-        font-weight: bold;
-        margin-bottom: 50px;
-      }
-      .counter-item {
-        font-size: 3em;
-        font-weight: bold;
-      }
-
-      /* Custom CSS for Testimonial section */
-      .testimonial {
-        background-color: #138808;
-        color: #fff;
-        padding: 100px 0;
-      }
-      .testimonial h2 {
-        font-size: 3em;
-        font-weight: bold;
-        margin-bottom: 50px;
-      }
-      .testimonial-text {
-        font-size: 1.5em;
-        font-style: italic;
-        text-align: center;
-      }
-      .testimonial-author {
-        font-size: 1.2em;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -243,7 +34,7 @@
         <span
           class="mx-2"
           style="color: #138808; font-size: 1.2em; font-weight: bold"
-          >CodeCrush</span
+          >CodeCrush Hub</span
         >
       </a>
       <button
@@ -259,7 +50,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto ">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link text-white" href="service.html">Services</a>
           </li>
@@ -282,7 +73,9 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="hero-text slideInDown">
-              <h1>Welcome to <span style="color: #138808">CodeCrush</span></h1>
+              <h1>
+                Welcome to <span style="color: #138808">CodeCrush Hub</span>
+              </h1>
               <p class="mb-4">
                 Your Partner in
                 <span style="color: #ff9933">Digital Success</span>
@@ -498,29 +291,47 @@
     <footer class="footer" style="background-color: #f8f9fa; padding: 50px 0">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <h3>About Us</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              aliquam, justo sit amet auctor accumsan, ligula sem vestibulum
-              nisi, et mollis arcu libero in lacus.
-            </p>
+            <blockquote class="about">
+              &quot;CodeCrush Hub is dedicated to providing innovative digital
+              solutions tailored to meet the unique needs of businesses. Our
+              team of dedicated professionals is committed to delivering
+              excellence in every project we undertake&quot;.
+            </blockquote>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-2">
             <h3>Services</h3>
             <ul class="list-unstyled">
-              <li class="mb-2"><a style="text-decoration: none;" href="#">Web Development</a></li>
-              <li class="mb-2"><a style="text-decoration: none;" href="#">App Development</a></li>
-              <li class="mb-2"><a style="text-decoration: none;" href="#">Graphic Design</a></li>
-              <li><a style="text-decoration: none;" href="#">Digital Marketing</a></li>
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#">Web Development</a>
+              </li>
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#">App Development</a>
+              </li>
+              <li class="mb-2">
+                <a style="text-decoration: none" href="#">Graphic Design</a>
+              </li>
+              <li>
+                <a style="text-decoration: none" href="#">Digital Marketing</a>
+              </li>
             </ul>
           </div>
           <div class="col-lg-3">
             <h3>Contact Us</h3>
             <ul class="list-unstyled">
-              <li>Email: info@codecrush.com</li>
-              <li>Phone: +1234567890</li>
-              <li>Address: 123 Main Street, City</li>
+              <li class="contact-footer">
+                Email: <span class="contact">info@codecrush.com</span>
+              </li>
+              <li class="contact-footer">
+                Phone: <span class="contact">+91 8176060086</span>
+              </li>
+              <li class="contact-footer">
+                Address:
+                <span class="contact"
+                  >Medical College, Orai, India, Uttar Pradesh</span
+                >
+              </li>
             </ul>
           </div>
           <div class="col-lg-3">
@@ -532,13 +343,19 @@
                 >
               </li>
               <li class="mb-2">
-                <a style="text-decoration: none" href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a style="text-decoration: none" href="#"
+                  ><i class="fab fa-twitter"></i> Twitter</a
+                >
               </li>
               <li class="mb-2">
-                <a style="text-decoration: none" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a style="text-decoration: none" href="#"
+                  ><i class="fab fa-instagram"></i> Instagram</a
+                >
               </li>
               <li class="mb-2">
-                <a style="text-decoration: none" href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <a style="text-decoration: none" href="#"
+                  ><i class="fab fa-linkedin-in"></i> LinkedIn</a
+                >
               </li>
             </ul>
           </div>
