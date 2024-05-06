@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeCrush - Contact Us</title>
+    <title>Contact Us</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -12,119 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <style>
-      /* Custom CSS for Contact Us page */
-      body {
-        background: linear-gradient(to bottom, #ff9933, #ff9933, #138808);
-        font-family: "Arial", sans-serif;
-      }
-      .navbar {
-        background-color: #4bbe40;
-      }
-      .navbar-nav .nav-link {
-        position: relative;
-      }
-      .navbar-nav .nav-link::after {
-        content: "";
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: transparent;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-      }
-      .navbar-nav .nav-link:hover::after {
-        background-color: #ffcc00; /* Lightning strike color */
-        transform: scaleX(1);
-      }
-      /* Additional styles for Contact Us form */
-      .contact-section {
-        padding: 100px 0;
-        text-align: center;
-        color: #fff;
-      }
-      .contact-section h2 {
-        font-size: 3em;
-        font-weight: bold;
-        margin-bottom: 50px;
-      }
-      .contact-form {
-        max-width: 500px;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      }
-      .form-group {
-        position: relative;
-        margin-bottom: 30px;
-      }
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
-        padding: 15px;
-        border-radius: 5px;
-        border: none;
-        background-color: #f9f9f9;
-        font-size: 1.1em;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.3s ease;
-      }
-      .form-group input:focus,
-      .form-group textarea:focus {
-        outline: none;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-      .form-group label {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #555; /* Adjusted color for better visibility */
-        font-size: 1em;
-        transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
-        pointer-events: none;
-        z-index: -1;
-      }
-      .form-group input:focus + label,
-      .form-group textarea:focus + label,
-      .form-group input:not(:placeholder-shown) + label,
-      .form-group textarea:not(:placeholder-shown) + label {
-        top: 10px;
-        font-size: 0.8em;
-        color: #777; /* Adjusted color for better visibility */
-      }
-      .btn-submit {
-        background-color: #ffcc00;
-        color: #138808;
-        border: none;
-        padding: 15px 30px;
-        border-radius: 30px;
-        font-size: 1.2em;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .btn-submit:hover {
-        background-color: #138808;
-        color: #ffcc00;
-      }
-      .input-group-text {
-        background-color: transparent;
-        border: none;
-        color: #fff;
-        font-size: 1.1em;
-      }
-      .input-group-text i {
-        transition: transform 0.3s ease;
-      }
-      .input-group-text:hover i {
-        transform: rotate(360deg);
-      }
-    </style>
+<link rel="stylesheet" href="contact.css">
   </head>
   <body>
     <!-- Navbar -->
@@ -184,7 +72,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h2 style="font-weight: 200;">Connect with <span style="color: #138808; font-weight: 700;">CodeCrush</span></h2>
+            <h2 style="font-weight: 200;">Connect with <span style="color: #138808; font-weight: 700;">CodeCrush Hub</span></h2>
             <form class="contact-form">
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Full Name" style="color: #138808; font-weight: 700; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman';" required />
@@ -217,15 +105,16 @@
     <footer class="footer" style="background-color: #f8f9fa; padding: 50px 0">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <h3>About Us</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              aliquam, justo sit amet auctor accumsan, ligula sem vestibulum
-              nisi, et mollis arcu libero in lacus.
-            </p>
+            <blockquote class="about">
+              &quot;CodeCrush Hub is dedicated to providing innovative digital
+              solutions tailored to meet the unique needs of businesses. Our
+              team of dedicated professionals is committed to delivering
+              excellence in every project we undertake&quot;.
+            </blockquote>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-2">
             <h3>Services</h3>
             <ul class="list-unstyled">
               <li class="mb-2">
@@ -245,9 +134,9 @@
           <div class="col-lg-3">
             <h3>Contact Us</h3>
             <ul class="list-unstyled">
-              <li>Email: info@codecrush.com</li>
-              <li>Phone: +1234567890</li>
-              <li>Address: 123 Main Street, City</li>
+              <li class="contact-footer">Email: <span class="contact">info@codecrush.com</span></li>
+              <li class="contact-footer">Phone: <span class="contact">+91 8176060086</span></li>
+              <li class="contact-footer">Address: <span class="contact">Medical College, Orai, India, Uttar Pradesh</span></li>
             </ul>
           </div>
           <div class="col-lg-3">
