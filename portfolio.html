@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeCrush - Portfolio</title>
+    <title>Portfolio</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -12,63 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <style>
-      /* Custom CSS for Portfolio page */
-      body {
-        background: linear-gradient(to bottom, #ff9933, #db9292, #138808);
-        font-family: "Arial", sans-serif;
-      }
-      .navbar {
-        background-color: #4bbe40;
-      }
-      .navbar-nav .nav-link {
-        position: relative;
-      }
-      .navbar-nav .nav-link::after {
-        content: "";
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: transparent;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-      }
-      .navbar-nav .nav-link:hover::after {
-        background-color: #ffcc00; /* Lightning strike color */
-        transform: scaleX(1);
-      }
-      .portfolio-section {
-        padding: 100px 0;
-      }
-      .portfolio-item {
-        margin-bottom: 30px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-      }
-      .portfolio-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-      }
-      .portfolio-item img {
-        max-width: 100%;
-        border-radius: 5px;
-      }
-      .portfolio-item .item-title {
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-top: 10px;
-        color: #138808;
-      }
-      .portfolio-item .item-category {
-        font-size: 1.2em;
-        color: #666;
-      }
-    </style>
+    <link rel="stylesheet" href="portfolio.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -157,15 +101,16 @@
     <footer class="footer" style="background-color: #f8f9fa; padding: 50px 0">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <h3>About Us</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              aliquam, justo sit amet auctor accumsan, ligula sem vestibulum
-              nisi, et mollis arcu libero in lacus.
-            </p>
+            <blockquote class="about">
+              &quot;CodeCrush Hub is dedicated to providing innovative digital
+              solutions tailored to meet the unique needs of businesses. Our
+              team of dedicated professionals is committed to delivering
+              excellence in every project we undertake&quot;.
+            </blockquote>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-2">
             <h3>Services</h3>
             <ul class="list-unstyled">
               <li class="mb-2">
@@ -185,9 +130,9 @@
           <div class="col-lg-3">
             <h3>Contact Us</h3>
             <ul class="list-unstyled">
-              <li>Email: info@codecrush.com</li>
-              <li>Phone: +1234567890</li>
-              <li>Address: 123 Main Street, City</li>
+              <li class="contact-footer">Email: <span class="contact">info@codecrush.com</span></li>
+              <li class="contact-footer">Phone: <span class="contact">+91 8176060086</span></li>
+              <li class="contact-footer">Address: <span class="contact">Medical College, Orai, India, Uttar Pradesh</span></li>
             </ul>
           </div>
           <div class="col-lg-3">
