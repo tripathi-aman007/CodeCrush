@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+
     <link rel="stylesheet" href="portfolio.css" />
   </head>
   <body>
@@ -70,26 +71,63 @@
     <!-- Portfolio Section -->
     <section class="portfolio-section">
       <div class="container">
-        <div class="row">
+        <div class="row" id="portfolio-items">
           <div class="col-lg-4">
             <div class="portfolio-item">
-              <img src="portfolio1.jpg" alt="Portfolio Item 1" />
-              <h3 class="item-title">Project 1</h3>
+              <div
+                class="d-flex justify-content-center align-items-center"
+                style="background-color: #ccc; height: 200px"
+              >
+                <p style="font-weight: 700; font-size: larger">
+                  Tours and Travels
+                </p>
+              </div>
+              <h3 class="item-title">Global Holidays</h3>
               <p class="item-category">Web Development</p>
+              <a
+                class="btn btn-outline-secondary"
+                href="https://tripathi-aman007.github.io/globalHolidays/"
+                target="_blank"
+              >
+                Visit Site <i class="fas fa-arrow-right ml-3"></i>
+              </a>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="portfolio-item">
-              <img src="portfolio2.jpg" alt="Portfolio Item 2" />
-              <h3 class="item-title">Project 2</h3>
-              <p class="item-category">App Development</p>
+              <div
+                class="d-flex justify-content-center align-items-center"
+                style="background-color: #ccc; height: 200px"
+              >
+                <p style="font-weight: 700; font-size: larger">EdTech</p>
+              </div>
+              <h3 class="item-title">CodeWave Solutions</h3>
+              <p class="item-category">Web Development</p>
+              <a
+                class="btn btn-outline-secondary"
+                href="https://tripathi-aman007.github.io/CodeWave-Solution/"
+                target="_blank"
+              >
+                Visit Site <i class="fas fa-arrow-right ml-3"></i>
+              </a>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="portfolio-item">
-              <img src="portfolio3.jpg" alt="Portfolio Item 3" />
-              <h3 class="item-title">Project 3</h3>
-              <p class="item-category">Graphic Design</p>
+              <div
+                class="d-flex justify-content-center align-items-center"
+                style="background-color: #ccc; height: 200px"
+              >
+                <p style="font-weight: 700; font-size: larger">Unknown</p>
+              </div>
+              <h3 class="item-title">Niksham</h3>
+              <p class="item-category">Web Development</p>
+              <a class="btn btn-outline-secondary" href="" target="">
+                Visit Site <i class="fas fa-arrow-right ml-3"></i>
+              </a>
+              <span style="font-size: 12px" class="text-muted"
+                >Link will be provided in few time.</span
+              >
             </div>
           </div>
           <!-- Add more portfolio items as needed -->
@@ -113,47 +151,44 @@
           <div class="col-lg-2">
             <h3>Services</h3>
             <ul class="list-unstyled">
-              <li class="mb-2">
-                <a style="text-decoration: none" href="#">Web Development</a>
-              </li>
-              <li class="mb-2">
-                <a style="text-decoration: none" href="#">App Development</a>
-              </li>
-              <li class="mb-2">
-                <a style="text-decoration: none" href="#">Graphic Design</a>
-              </li>
-              <li>
-                <a style="text-decoration: none" href="#">Digital Marketing</a>
-              </li>
+              <li class="mb-2">Web Development</li>
+              <li class="mb-2">App Development</li>
+              <li class="mb-2">Graphic Design</li>
+              <li class="mb-2">Digital Marketing</li>
+              <li>Wordpress</li>
             </ul>
           </div>
           <div class="col-lg-3">
             <h3>Contact Us</h3>
             <ul class="list-unstyled">
-              <li class="contact-footer">Email: <span class="contact">codecrushhub@gmail.com</span></li>
-              <li class="contact-footer">Phone: <span class="contact">+91 8176060086</span></li>
-              <li class="contact-footer">Address: <span class="contact">Medical College, Orai, India, Uttar Pradesh</span></li>
+              <li class="contact-footer">
+                Email: <span class="contact">info@codecrush.com</span>
+              </li>
+              <li class="contact-footer">
+                Phone: <span class="contact">+91 8176060086</span>
+              </li>
+              <li class="contact-footer">
+                Address:
+                <span class="contact"
+                  >Medical College, Orai, India, Uttar Pradesh</span
+                >
+              </li>
             </ul>
           </div>
           <div class="col-lg-3">
             <h3>Follow Us</h3>
             <ul class="list-unstyled">
-              <li class="mb-2">
+              <li class="mb-3">
                 <a style="text-decoration: none" href="#"
                   ><i class="fab fa-facebook-f"></i> Facebook</a
                 >
               </li>
-              <li class="mb-2">
-                <a style="text-decoration: none" href="#"
-                  ><i class="fab fa-twitter"></i> Twitter</a
-                >
-              </li>
-              <li class="mb-2">
+              <li class="mb-3">
                 <a style="text-decoration: none" href="#"
                   ><i class="fab fa-instagram"></i> Instagram</a
                 >
               </li>
-              <li class="mb-2">
+              <li class="mb-3">
                 <a style="text-decoration: none" href="#"
                   ><i class="fab fa-linkedin-in"></i> LinkedIn</a
                 >
@@ -172,7 +207,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript -->
   </body>
 </html>
